@@ -1,0 +1,136 @@
+@media(max-width: 768px) {
+
+    .header .menu .menu-principal,
+    .header section {
+        display: none;
+    }
+
+    .menu-hamburguer {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        width: 40px;
+        height: 20px;
+    }
+
+    .menu-hamburguer span {
+        background-color: #151515;
+        display: block;
+        height: 2px;
+        margin: 7px auto;
+        transition: all 0.3s;
+    }
+
+
+    #menu-toggle:checked~.menu-hamburguer span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    #menu-toggle:checked~.menu-hamburguer span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu-toggle:checked~.menu-hamburguer span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    #menu-toggle:checked~.menu-mobile {
+        display: block;
+        position: absolute;
+        left: 75%;
+        top: 9.5%;
+        background-color: hsl(0, 2%, 29%);
+        color: #fff;
+        box-sizing: content-box;
+        padding: 0 5vw;
+    }
+
+    .menu-mobile>ul {
+        margin-top: 50px;
+    }
+
+    .menu-mobile>ul li a {
+        color: #fff;
+    }
+
+    .menu-mobile>ul.menu-principal>li {
+        margin-bottom: 50px;
+    }
+
+    .menu-mobile>ul.menu-principal img {
+        margin-right: 12px;
+    }
+
+    .menu-dropdown li:first-child {
+        margin-top: 20px;
+    }
+
+    .menu-dropdown li {
+        margin-top: 10px;
+    }
+
+
+    main {
+        flex-wrap: wrap-reverse;
+    }
+
+    main picture {
+        width: auto;
+    }
+
+    main .imagem-principal {
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 430px) {
+    main {
+        padding: 0;
+        gap: 48px;
+    }
+
+    main .info {
+        max-width: 100%;
+        padding: 16px;
+    }
+
+    main .info .title {
+        font-family: Epilogue;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 42px;
+        letter-spacing: -0.5px;
+        width: 343px;
+        padding: 10px;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    main .info .product-description {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 26px;
+        width: 343px;
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    main .info .learn-more {
+        align-self: center;
+        margin-bottom: 48px;
+    }
+
+    main .info .logos {
+        gap: 28px;
+    }
+
+    main .info .logos img {
+        width: 100%;
+    }
+
+    main .imagem-principal {
+        max-width: 100%;
+    }
+}
