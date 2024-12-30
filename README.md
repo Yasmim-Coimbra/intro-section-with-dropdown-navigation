@@ -20,8 +20,8 @@ Usuários devem poder ver:
 
 ### Desktop
 
-![Preview do Projeto](./design/desktop-preview.gif)
+![Preview do Projeto](./src/design/desktop-preview.gif)
 
 ### Mobile
 
-![Preview do Projeto](./design/mobile-preview.gif)
+![Preview do Projeto](./src/design/mobile-preview.gif)
