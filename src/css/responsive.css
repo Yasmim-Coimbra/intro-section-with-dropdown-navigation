@@ -1,85 +1,102 @@
+@media (max-width: 1240px) {
+    main {
+        flex-direction: column-reverse;
+
+        picture {
+            width: 530px;
+        }
+    }
+}
+
 @media(max-width: 768px) {
-
-    .header .menu .menu-principal,
-    .header section {
-        display: none;
+    .overlay.ativo{
+        position: fixed;
+        width: 100dvw;
+        height: 100dvh;
+        opacity: 0.75;
+        left: 0;
+        top: 0;
+        background: #151515;
     }
 
-    .menu-hamburguer {
-        cursor: pointer;
-        display: inline-block;
+    .header {
         position: relative;
-        width: 40px;
-        height: 20px;
-    }
 
-    .menu-hamburguer span {
-        background-color: #151515;
-        display: block;
-        height: 2px;
-        margin: 7px auto;
-        transition: all 0.3s;
-    }
+        .menu-principal,
+        .login-register-desktop {
+            display: none;
+        }
 
+        .menu-principal>li:nth-last-child(n+1):nth-last-child(-n+2) {
+            display: inline-block;
+            width: 100%;
 
-    #menu-toggle:checked~.menu-hamburguer span:nth-child(1) {
-        transform: rotate(45deg) translate(6px, 6px);
-    }
+            button {
+                width: 100%;
+            }
+        }
 
-    #menu-toggle:checked~.menu-hamburguer span:nth-child(2) {
-        opacity: 0;
-    }
+        #menu-hamburger {
+            cursor: pointer;
+            display: inline-block;
+            width: 40px;
+        }
 
-    #menu-toggle:checked~.menu-hamburguer span:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -6px);
-    }
+        .menu-principal.ativo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: absolute;
+            right: 0;
+            top: 0;
+            background-color: #fff;
+            width: 240px;
+            padding: 25px;
+            min-height: 100dvh;
+            border-bottom-left-radius: 15px;
 
-    #menu-toggle:checked~.menu-mobile {
-        display: block;
-        position: absolute;
-        left: 75%;
-        top: 9.5%;
-        background-color: hsl(0, 2%, 29%);
-        color: #fff;
-        box-sizing: content-box;
-        padding: 0 5vw;
-    }
+            & > li {
+                margin-bottom: 35px;
+            }
 
-    .menu-mobile>ul {
-        margin-top: 50px;
-    }
+            & > li:nth-last-child(n+1):nth-last-child(-n+2) {
+                margin-bottom: 15px;
+            }
+        }
 
-    .menu-mobile>ul li a {
-        color: #fff;
-    }
+        .menu-principal.ativo #menu-close {
+            display: inline-block;
+            max-width: 30px;
+            align-self: flex-end;
+            cursor: pointer;
+            margin-bottom: 35px;
+        }
 
-    .menu-mobile>ul.menu-principal>li {
-        margin-bottom: 50px;
-    }
+        .menu-principal.ativo .menu-dropdown {
+            display: none;
+        }
 
-    .menu-mobile>ul.menu-principal img {
-        margin-right: 12px;
-    }
+        .menu-principal.ativo li.ativo .menu-dropdown {
+            position: static;
+            gap: 5px;
+            padding: 0;
+            margin-left: 15px;
+            border-radius: 0;
+            box-shadow: none;
 
-    .menu-dropdown li:first-child {
-        margin-top: 20px;
-    }
-
-    .menu-dropdown li {
-        margin-top: 10px;
+            li {
+                margin-top: 10px;
+            }
+        }
     }
 
 
     main {
-        flex-wrap: wrap-reverse;
-    }
 
-    main picture {
-        width: auto;
-    }
-
-    main .imagem-principal {
-        max-width: 450px;
+        picture,
+        .info {
+            max-width: 450px;
+        }
     }
 }
 
@@ -87,24 +104,27 @@
     main {
         padding: 0;
         gap: 48px;
+        margin-bottom: 20px;
     }
 
     main .info {
         max-width: 100%;
         padding: 16px;
+        text-align: center;
     }
 
     main .info .title {
         font-family: Epilogue;
-        font-size: 30px;
+        font-size: 25px;
         font-style: normal;
         font-weight: 700;
         line-height: 42px;
         letter-spacing: -0.5px;
-        width: 343px;
+        max-width: 343px;
         padding: 10px;
         text-align: center;
         margin-bottom: 16px;
+        margin-inline: auto;
     }
 
     main .info .product-description {
@@ -112,14 +132,15 @@
         font-style: normal;
         font-weight: 500;
         line-height: 26px;
-        width: 343px;
-        text-align: center;
+        max-width: 343px;
         margin-bottom: 24px;
+        margin-inline: auto;
     }
 
-    main .info .learn-more {
+    main .info button.learn-more {
         align-self: center;
-        margin-bottom: 48px;
+        max-width: 100%;
+        margin: 20px 0 100px;
     }
 
     main .info .logos {
@@ -130,7 +151,7 @@
         width: 100%;
     }
 
-    main .imagem-principal {
+    main picture {
         max-width: 100%;
     }
 }
